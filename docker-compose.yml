@@ -2,7 +2,7 @@ version: "3"
 
 services:
   ci-test:
-    image: owaltari/ci-test-app:latest
+    image: sifishome/ci-test-app:latest
     ports:
       - 5050:5050/tcp
 

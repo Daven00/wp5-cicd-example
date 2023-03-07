@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/hello")
 def apicall_hello():
-    return "Hello\n"
+    return "Hello world!\n"
 
 @app.route("/commit-id")
 def apicall_commit_id():

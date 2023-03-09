@@ -7,7 +7,6 @@ on:
 
 jobs:
   docker:
-    environment: dockerhub-ci
     runs-on: ubuntu-latest
     steps:
       -

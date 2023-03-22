@@ -16,17 +16,18 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       -
-        name: Login to Docker Hub
+        name: Login to GitHub container registry (ghcr.io)
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Build and push
         uses: docker/build-push-action@v4
         with:
           platforms: linux/amd64,linux/arm64,linux/arm
           push: true
-          tags: sifishome/ci-test-app:latest
+          tags: ghcr.io/sifis-home/ci-test-app:latest
           build-args: |
             COMMIT_ID=${{ github.sha }}

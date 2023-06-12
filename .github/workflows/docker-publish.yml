@@ -31,3 +31,6 @@ jobs:
           tags: ghcr.io/sifis-home/ci-test-app:latest
           build-args: |
             COMMIT_ID=${{ github.sha }}
+          labels: |
+            app_label=TheAppLabel
+            code_coverage=CodeCoverageResults

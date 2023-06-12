@@ -33,4 +33,4 @@ jobs:
             COMMIT_ID=${{ github.sha }}
           labels: |
             app_label=TheAppLabel
-            code_coverage=CodeCoverageResults
+            code_coverage=CodeCoverageResults2

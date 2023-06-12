@@ -28,7 +28,7 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64,linux/arm
           push: true
-          tags: ghcr.io/Daven00/ci-test-app:latest
+          tags: ghcr.io/daven00/ci-test-app:latest
           build-args: |
             COMMIT_ID=${{ github.sha }}
           labels: |
